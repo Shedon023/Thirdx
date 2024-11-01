@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #7e7e82;
+  padding: 16px;
+}
+
+.brand_list {
+  display: flex;
+  column-gap: 24px;
+  row-gap: 16px;
+  list-style-type: none;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.brand_list-link,
+.swiper-slide {
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  width: 240px !important;
+  height: 72px;
+  padding: 20px 16px;
+  gap: 60px;
+}
+
+.brand_list-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ff3e79;
+  background-color: white;
+  right: 10px;
+}
+
+.brand_list-button::before {
+  content: url("../images/pinkk.svg");
+}
+
+.show_all {
+  display: none;
+}
+
+.swipper-wrapper {
+  width: 240px;
+}
+
+.MySwiper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.swiper-pagination {
+  position: static;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-pagination-color: #b5b6bc;
+  --swiper-pagination-bullet-inactive-color: #dddddd;
+}
+
+@media (min-device-width: 768px) {
+  .header {
+    padding-left: 24px;
+  }
+
+  .brand_list {
+    flex-wrap: wrap;
+    padding-left: 24px;
+    width: 100%;
+  }
+
+  .stealth {
+    display: none;
+  }
+
+  .swiper-slide {
+    width: 224px !important;
+  }
+
+  .show_all {
+    display: inline;
+    border: none;
+    color: #1b1c21;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 7px;
+    margin-top: 24px;
+    background: transparent;
+    width: 200px;
+  }
+
+  .show_all::before {
+    content: url("../images/blue-arrows_down.svg");
+    position: absolute;
+    left: 22px;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (min-device-width: 1120px) {
+  .header {
+    padding-left: 32px;
+  }
+
+  .stealth {
+    display: none;
+  }
+
+  .brand_list {
+    padding-left: 32px;
+    column-gap: 32px;
+  }
+
+  .swiper-slide {
+    width: 240px !important;
+  }
+
+  .show_all {
+    padding-left: 33px;
+  }
+
+  .show_all::before {
+    left: 30px;
+  }
+
+  .acer {
+    display: flex;
+  }
+
+  .sony {
+    display: flex;
+  }
+}
